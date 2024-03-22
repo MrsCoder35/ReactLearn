@@ -4,6 +4,7 @@ const setTime = () => {
      <div>
         <h1>Javascript Element</h1>
         <p>${new Date().toLocaleTimeString()}</p>
+        
      </div>
   `;
   
