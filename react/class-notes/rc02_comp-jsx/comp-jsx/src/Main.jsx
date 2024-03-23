@@ -54,6 +54,8 @@ const Main = () => {
           src="https://cdn.pixabay.com/photo/2024/02/16/16/39/flower-8577961_640.jpg"
           alt="cicek"
         />
+        <img className="img" src="./images/kedi.jpeg" alt="kedi" />
+        
       </div>
     </main>
   );
