@@ -12,10 +12,17 @@
 //? CSS dosyalari import "path" seklinde eklenir.
 
 const Main = () => {
+  const headerStyle = {
+    color: "blue",
+    backgroundColor: "lightblue",
+    fonsSize: "1rem",
+    fontWeight: "bold",
+  };
   return (
     <main>
       {/* Inline CSS */}
-      <h2 style={{color: "red", backgroundColor: "gray"}}>MAIN SECTION</h2>
+      <h2 style={{ color: "red", backgroundColor: "gray" }}>MAIN SECTION</h2>
+      <h2 style={headerStyle}>Other Header</h2>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo repellat
         tempora, vitae maxime doloribus, eos voluptas vero itaque ipsam
@@ -24,6 +31,10 @@ const Main = () => {
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure,
         necessitatibus? Eos fugiat consectetur deserunt adipisci!
+      </p>
+      <p style={headerStyle}>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet porro
+        officiis ipsa quibusdam, similique veniam.
       </p>
     </main>
   );
