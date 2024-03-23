@@ -7,7 +7,7 @@ function Header(){
         
         <header>
             {/* jJSX alanı yorum satiri */}
-            <h1>{yazi}</h1>
+            <h1 className="par">{yazi}</h1>
         </header>
     )
 }
