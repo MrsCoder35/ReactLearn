@@ -11,6 +11,7 @@
 
 //? CSS dosyalari import "path" seklinde eklenir.
 import "./Main.css"
+import kediImage from "./images/kedi.jpeg"
 
 const Main = () => {
   const headerStyle = {
@@ -54,7 +55,9 @@ const Main = () => {
           src="https://cdn.pixabay.com/photo/2024/02/16/16/39/flower-8577961_640.jpg"
           alt="cicek"
         />
-        <img className="img" src="./images/kedi.jpeg" alt="kedi" />
+         {/* Lokal ortamımızda buluna bir resmi dogrudan path vererek cagiramayiz. Bunun yerine import yaparız */}
+        <img className="img" src={kediImage} alt="kedi" />
+        <img className="img" src="./img/bird.webp" alt="bird" />
         
       </div>
     </main>
