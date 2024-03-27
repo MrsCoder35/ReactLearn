@@ -1,31 +1,22 @@
-// ? deafult exportun importu, istediğimiz isimle import edebiliriz
-// import MyCat from "./components/Cat";
-import Cat from "./components/Cat";
-
+import Card from "./components/card/Card";
+import data from "./data";
 function App() {
+  console.log(data);
   return (
-    //! JSX (HTML- JS'nin birleşmiş hali)
     <div className="App">
-      <Cat
-        name="Cenitin"
-        img="https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_1280.jpg"
-        color="grey"
-        // isBlueEyed={true}
-        isBlueEyed
-      />
-      <Cat
-        name="Garfield"
-        img="https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_640.jpg"
-        color="blue"
-        // isBlueEyed={false}
-      />
-      <Cat
-        name="Şerafettin"
-        img="https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_640.jpg"
-        // isBlueEyed={true}
-        isBlueEyed
-      />
-      {/* <MyCat /> */}
+      <h2 style={{ textAlign: "center" }}>LANGUAGES</h2>
+
+      {/* //! Birden fazla statemet kullanicaksa o zaman fonksiyonun suslu  ve return keywordu kullanamsi gerekir. */}
+
+      {/* //? Rendering Lists */}
+      {/* //* Each child in a list should have a unique "key" prop. React liste içindeki her bir elemanın uniqe bir key'e sahip olmasını ister */}
+      {data.map((item, i) => {
+        return <Card key={item.id} lang={item.language} img={item.img} />;
+      })}
+
+      {/* <Card lang={data[0].language} img={data[0].img} />
+      <Card lang={data[1].language} img={data[1].img} />
+      <Card lang={data[2].language} img={data[2].img} /> */}
     </div>
   );
 }
