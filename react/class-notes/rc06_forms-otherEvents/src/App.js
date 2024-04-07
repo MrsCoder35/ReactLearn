@@ -1,14 +1,18 @@
-//? Component
-function App() {
-  //? JS kodu
-  const deneme = "REACT"
+import Forms from "./components/1-forms/Forms"
+import FormsObject from "./components/1-forms/FormsObject"
+import KeyboardClipboard from "./components/2-keyboardClipboardEvents/KeyboardClipboard"
+import MouseEvent from "./components/3-mouseEvents/MouseEvent"
+// import { Container } from "react-bootstrap"
+import Container from "react-bootstrap/Container"
 
+function App() {
   return (
-    //! JSX (HTML- JS'nin birleşmiş hali)
-    <div className="App">
-      <h2 style={{ color: "red" }}>Hoşgeldin Ya Şehri React</h2>
-      <p className="par">{deneme}</p>
-    </div>
+    <Container className="mt-4">
+      {/* <Forms /> */}
+      {/* <FormsObject /> */}
+      {/* <KeyboardClipboard /> */}
+      <MouseEvent />
+    </Container>
   )
 }
 
