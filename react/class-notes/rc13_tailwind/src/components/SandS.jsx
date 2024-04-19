@@ -28,6 +28,11 @@ const SandS = () => {
             Tıkla
           </button>
       </div>
+      <div>
+        <button className="bg-indigo-300 rounded-full py-2 mx-1 w-20">Tıkla</button>
+        <button className="bg-indigo-300 rounded-full py-2 mx-1 w-1/2">Tıkla</button>
+        <button className="bg-indigo-300 rounded-full py-2 m-3 w-[300px]">Tıkla</button>
+      </div>
     </>
   );
 };
