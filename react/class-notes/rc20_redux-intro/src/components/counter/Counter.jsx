@@ -5,8 +5,12 @@ import { arttir, arttirma, azalt, azaltma, sil } from "../../store/counterReduce
 const Counter = () => {
 
   //? Global state'den veri okumak için useSelector hook'u kullanılır
- const count = useSelector((state) => state.count)
-const token = useSelector((state) => state.token)
+//  const count = useSelector((state) => state.count)
+//  const count = useSelector((state) => state.counter.count)
+ const {count, token} = useSelector((state) => state.counter)
+
+
+// const token = useSelector((state) => state.token)
 
  const dispatch = useDispatch()
   return (
