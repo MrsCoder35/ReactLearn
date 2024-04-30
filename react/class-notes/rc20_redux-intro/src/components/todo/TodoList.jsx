@@ -4,10 +4,10 @@ import { clearTodo } from "../../store/todoReducer"
 
 const TodoList = () => {
   const todoList = useSelector((state) => state.todo.todoList)
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const handleClearList = () => {
-    // dispatch(clearTodo())
+    dispatch(clearTodo())
   }
 
   console.log(todoList)
