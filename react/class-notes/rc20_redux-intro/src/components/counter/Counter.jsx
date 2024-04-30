@@ -6,6 +6,8 @@ const Counter = () => {
 
   //? Global state'den veri okumak için useSelector hook'u kullanılır
  const count = useSelector((state) => state.count)
+const token = useSelector((state) => state.token)
+
  const dispatch = useDispatch()
   return (
     <div className="app">

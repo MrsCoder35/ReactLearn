@@ -1,5 +1,6 @@
 const initialState = {
   count: 0,
+  token: null,
 };
 
 //? action type'larının degisken olarak tanımlanması bizi bir çok case-sensitive hatasından kurtarır
@@ -14,13 +15,12 @@ export const arttirma = () => {
     return { type : arttir}
 }
 
-export const azaltma = () => {
-    return { type : azalt}
-}
+export const azaltma = () => ({ type : azalt})
 
-export const silme = () => {
-    return {type : sil}
-}
+
+export const silme = () => ({type : sil})
+
+//? State'lerin değişimine karar veren reducer logic'i
 
 export const counterReducer = (state = initialState, action) => {
   switch (action.type) {
