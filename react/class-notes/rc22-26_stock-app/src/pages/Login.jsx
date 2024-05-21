@@ -66,7 +66,7 @@ onSubmit = {(values, actions) => {
   //? form resetleme
   //? navigate
 }}>
-  {({values, handleChange, handleBlur}) => (
+  {({values, handleChange, handleBlur, touched, errors}) => (
     <Form> <Box
             
     sx={{ display: "flex", flexDirection: "column", gap: 2 }}
@@ -80,8 +80,8 @@ onSubmit = {(values, actions) => {
       value = {values.email}
       onChange = {handleChange}
       onBlur = {handleBlur}
-      error = {true}
-      helperText = {"Deneme"}
+      error = {touched.email && Boolean(errors.email)}
+      helperText = {errors.email}
     />
     <TextField
       label="password"
