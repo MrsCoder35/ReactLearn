@@ -70,6 +70,7 @@ const Login = () => {
               //? Toastify
               //? Global state güncellenmesi
               //? form resetleme
+              actions.resetForm();
               //? navigate
             }}
           >
