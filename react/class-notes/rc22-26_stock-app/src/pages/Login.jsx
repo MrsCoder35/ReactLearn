@@ -71,10 +71,11 @@ const Login = () => {
               //? Global state güncellenmesi
               //? form resetleme
               actions.resetForm();
+              actions.setSubmitting(false);  //? isSubmitting
               //? navigate
             }}
           >
-            {({ values, handleChange, handleBlur, touched, errors }) => (
+            {({ values, handleChange, handleBlur, touched, errors, isSubmitting }) => (
               <Form>
                 {" "}
                 <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
@@ -102,7 +103,7 @@ const Login = () => {
                     error={touched.password && Boolean(errors.password)}
                     helperText={touched.password && errors.password}
                   />
-                  <Button variant="contained" type="submit">
+                  <Button variant="contained" type="submit" disable = {isSubmitting}>
                     Submit
                   </Button>
                 </Box>
